@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {Box, Image} from "@chakra-ui/react";
+import CardComponent from "./components/Card/card.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <Box height="100vh" width="100vw" overflow="hidden">
+            <Image src="src/assets/image.jpg" height="100vh" position="relative"/>
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            <Box width={{base: "90vw", md: "60vw", lg: "40vw"}} position="absolute" top="50%" left="50%"
+                 transform="translate(-50%, -50%)">
+                <CardComponent title="Looks like you're new here!"
+                               subtitle="Sign up to get started!"
+                               content={<div/>}
+                />
+            </Box>
+        </Box>
+    )
 }
 
 export default App
