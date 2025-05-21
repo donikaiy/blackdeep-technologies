@@ -5,7 +5,7 @@ import RegistrationForm from "./components/RegistrationForm/registrationForm.tsx
 function App() {
     return (
         <Box height="100vh" width="100vw" overflow="hidden">
-            <Image src="src/assets/image.webp" height="100vh" position="relative"/>
+            <Image src="/image.webp" height="100vh" position="relative"/>
 
             <Box width={{base: "90vw", md: "60vw", lg: "40vw"}} position="absolute" top="50%" left="50%"
                  transform="translate(-50%, -50%)">
