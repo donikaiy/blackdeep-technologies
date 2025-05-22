@@ -34,9 +34,12 @@ const RegistrationForm = () => {
     });
 
     const handlePasswordChange = async () => {
-        await trigger("confirmPassword");
-    };
+        const confirmPasswordValue = watch("confirmPassword");
 
+        if (confirmPasswordValue) {
+            await trigger(["password", "confirmPassword"])
+        }
+    };
     const onSubmit = (data: RegistrationFormValues) => {
         console.log(data);
     };
